@@ -1,15 +1,203 @@
 <!DOCTYPE html>
 
 <html lang="es">
-<head>
+<head data-key="t18">
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EYHZE218SX"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+const translations = {
+  es: {
+    "t01": `1 dormitorio-salón con cama de matrimonio y sofá cama.`,
+    "t02": `A 150 metros de la playa (menos de 5 minutos a pie).`,
+    "t03": `A 450 metros del centro (Paseo Larios).`,
+    "t04": `Actividades y ocio`,
+    "t05": `Alquiler vacacional Torre del Mar | Apartamento Estrella con piscina`,
+    "t06": `Amplia piscina comunitaria para adultos y niños, abierta desde mediados de Junio a mediados de Septiembre y dentro de un recinto privado.`,
+    "t07": `Apartamento muy bien ubicado, a 5 min del Faro de Torre del Mar y totalmente equipado. Con piscina, muy cerca de la playa a 5 min a pié y rodeados de todos los comercios y servivios esenciales.`,
+    "t08": `Armarios zapatero.`,
+    "t09": `Baño completo con ducha.`,
+    "t10": `Biblioplaya con libros y juegos a 10 min andando.`,
+    "t11": `Bienvenidos al Apartamento Turístico Estrella del Mar`,
+    "t12": `Capacidad máxima: 4 personas en verano.`,
+    "t13": `Cerca de tiendas, restaurantes, bares, supermercados, farmacias, bazares, bancos, estacion de autobuses y parada de taxi, instalaciones deportivas y mucho más.`,
+    "t14": `Cocina independiente totalmente equipada.`,
+    "t15": `Comodidades del apartamento`,
+    "t16": `Dispone de Licencia turistica.`,
+    "t17": `Entorno y servicios cercanos`,
+    "t18": `Google tag (gtag.js)`,
+    "t19": `Ideal para parejas fuera de la temporada estival.`,
+    "t20": `Información adicional`,
+    "t21": `Lavadora y termo eléctrico.`,
+    "t22": `Lectura en la biblioteca municipal a 2 min a pie.`,
+    "t23": `No se admiten mascotas.`,
+    "t24": `No se alquila por larga temporada ni durante el curso escolar.`,
+    "t25": `No se permite fumar.`,
+    "t26": `Orientación este y sol de mañana.`,
+    "t27": `Para más información consulta nuestras reseñas y disponibilidad en Airbnb y Vrbo. Tambien puedes consultar oferta de nuestro segundo apartamento turístico, accediendo al enlace de la foto, ubicado en la misma zona.También puedes contactar por WhatsApp o email para cualquier duda.`,
+    "t28": `Smart-TV, WiFi, aire acondicionado/calefacción.`,
+    "t29": `Ubicación privilegiada`,
+    "t30": `Web desarrollada por miprochip.com`,
+    "t31": `Zona de piscinas`,
+    "t32": `Zonas deportivas municipales junto a la playa.`,
+    "t33": `html`,
+    "t34": `¡¡Torre del Mar todo el año, ven y disfruta!!`,
+  },
+  en: {
+    "t01": `1 bedroom-living room with double bed and sofa bed.`,
+    "t02": `150 meters from the beach (less than 5 minutes walk).`,
+    "t03": `450 meters from the center (Paseo Larios).`,
+    "t04": `Activities and leisure`,
+    "t05": `Holiday rental in Torre del Mar | Estrella Apartment with pool`,
+    "t06": `Large community pool for adults and children, open from mid-June to mid-September and within a private complex.`,
+    "t07": `Very well located apartment, 5 min from the Torre del Mar Lighthouse and fully equipped. With pool, very close to the beach (5 min walk), surrounded by all essential shops and services.`,
+    "t08": `Shoe cabinets.`,
+    "t09": `Full bathroom with shower.`,
+    "t10": `Beach library with books and games 10 min walk away.`,
+    "t11": `Welcome to Estrella del Mar Tourist Apartment`,
+    "t12": `Maximum capacity: 4 people in summer.`,
+    "t13": `Close to shops, restaurants, bars, supermarkets, pharmacies, bazaars, banks, bus station and taxi stop, sports facilities and much more.`,
+    "t14": `Independent kitchen fully equipped.`,
+    "t15": `Apartment Amenities`,
+    "t16": `Tourist license available.`,
+    "t17": `Surroundings and nearby services`,
+    "t18": `Google tag (gtag.js)`,
+    "t19": `Ideal for couples outside the summer season.`,
+    "t20": `Additional information`,
+    "t21": `Washing machine and electric water heater.`,
+    "t22": `Reading at the municipal library 2 min walk away.`,
+    "t23": `No pets allowed.`,
+    "t24": `Not rented long-term or during the school year.`,
+    "t25": `Smoking is not allowed.`,
+    "t26": `East orientation and morning sun.`,
+    "t27": `For more information, check our reviews and availability on Airbnb and Vrbo. You can also view our second tourist apartment via the photo link, located in the same area. Feel free to contact us via WhatsApp or email with any questions.`,
+    "t28": `Smart-TV, WiFi, air conditioning/heating.`,
+    "t29": `Privileged location`,
+    "t30": `Website developed by miprochip.com`,
+    "t31": `Pool area`,
+    "t32": `Municipal sports areas next to the beach.`,
+    "t33": `Torre del Mar all year round, come and enjoy!!`,
+    "t34": `Torre del Mar all year round – come and enjoy!`,
+  },
+  fr: {
+    "t01": `1 chambre-salon avec lit double et canapé-lit.`,
+    "t02": `À 150 mètres de la plage (moins de 5 minutes à pied).`,
+    "t03": `À 450 mètres du centre (Paseo Larios).`,
+    "t04": `Activités et loisirs`,
+    "t05": `Location de vacances à Torre del Mar | Appartement Estrella avec piscine`,
+    "t06": `Grande piscine communautaire pour adultes et enfants, ouverte de mi-juin à mi-septembre et située dans une enceinte privée.`,
+    "t07": `Appartement très bien situé, à 5 min du phare de Torre del Mar et entièrement équipé. Avec piscine, très proche de la plage (5 min à pied), entouré de tous les commerces et services essentiels.`,
+    "t08": `Placards à chaussures.`,
+    "t09": `Salle de bain complète avec douche.`,
+    "t10": `Biblioplage avec livres et jeux à 10 min à pied.`,
+    "t11": `Bienvenue à l'appartement touristique Estrella del Mar`,
+    "t12": `Capacité maximale : 4 personnes en été.`,
+    "t13": `Proche de magasins, restaurants, bars, supermarchés, pharmacies, bazars, banques, gare routière et arrêt de taxi, installations sportives et bien plus encore.`,
+    "t14": `Cuisine indépendante entièrement équipée.`,
+    "t15": `Commodités de l'appartement`,
+    "t16": `Licence touristique disponible.`,
+    "t17": `Environnement et services à proximité`,
+    "t18": `Balise Google (gtag.js)`,
+    "t19": `Idéal pour les couples hors saison estivale.`,
+    "t20": `Informations supplémentaires`,
+    "t21": `Lave-linge et chauffe-eau électrique.`,
+    "t22": `Lecture à la bibliothèque municipale à 2 min à pied.`,
+    "t23": `Animaux non admis.`,
+    "t24": `Non loué pour de longues périodes ni pendant l'année scolaire.`,
+    "t25": `Interdiction de fumer.`,
+    "t26": `Orientation est et soleil du matin.`,
+    "t27": `Pour plus d'informations, consultez nos avis et disponibilités sur Airbnb et Vrbo. Vous pouvez également consulter notre deuxième appartement touristique via le lien photo, situé dans la même zone. N'hésitez pas à nous contacter via WhatsApp ou email pour toute question.`,
+    "t28": `Smart-TV, WiFi, climatisation/chauffage.`,
+    "t29": `Emplacement privilégié`,
+    "t30": `Site web développé par miprochip.com`,
+    "t31": `Zone de piscine`,
+    "t32": `Zones sportives municipales près de la plage.`,
+    "t33": `Torre del Mar toute l'année, venez en profiter !!`,
+    "t34": `Torre del Mar toute l'année – venez en profiter !`,
+  },
+  it: {
+    "t01": `1 camera-soggiorno con letto matrimoniale e divano letto.`,
+    "t02": `A 150 metri dalla spiaggia (meno di 5 minuti a piedi).`,
+    "t03": `A 450 metri dal centro (Paseo Larios).`,
+    "t04": `Attività e svago`,
+    "t05": `Affitto vacanze a Torre del Mar | Appartamento Estrella con piscina`,
+    "t06": `Ampia piscina comunitaria per adulti e bambini, aperta da metà giugno a metà settembre, all'interno di un complesso privato.`,
+    "t07": `Appartamento molto ben posizionato, a 5 min dal faro di Torre del Mar e completamente attrezzato. Con piscina, molto vicino alla spiaggia (5 min a piedi), circondato da tutti i negozi e servizi essenziali.`,
+    "t08": `Armadi portascarpe.`,
+    "t09": `Bagno completo con doccia.`,
+    "t10": `Biblioteca da spiaggia con libri e giochi a 10 min a piedi.`,
+    "t11": `Benvenuti all'appartamento turistico Estrella del Mar`,
+    "t12": `Capacità massima: 4 persone in estate.`,
+    "t13": `Vicino a negozi, ristoranti, bar, supermercati, farmacie, bazar, banche, stazione degli autobus e fermata dei taxi, impianti sportivi e molto altro.`,
+    "t14": `Cucina indipendente completamente attrezzata.`,
+    "t15": `Servizi dell'appartamento`,
+    "t16": `Licenza turistica disponibile.`,
+    "t17": `Ambiente e servizi vicini`,
+    "t18": `Tag Google (gtag.js)`,
+    "t19": `Ideale per coppie fuori stagione estiva.`,
+    "t20": `Informazioni aggiuntive`,
+    "t21": `Lavatrice e scaldabagno elettrico.`,
+    "t22": `Lettura nella biblioteca comunale a 2 minuti a piedi.`,
+    "t23": `Animali non ammessi.`,
+    "t24": `Non affittato per lunghi periodi né durante l'anno scolastico.`,
+    "t25": `Vietato fumare.`,
+    "t26": `Esposizione est e sole del mattino.`,
+    "t27": `Per maggiori informazioni consulta le nostre recensioni e disponibilità su Airbnb e Vrbo. Puoi anche vedere il nostro secondo appartamento turistico tramite il link nella foto, situato nella stessa zona. Non esitare a contattarci tramite WhatsApp o email per qualsiasi domanda.`,
+    "t28": `Smart-TV, WiFi, aria condizionata/riscaldamento.`,
+    "t29": `Posizione privilegiata`,
+    "t30": `Sito sviluppato da miprochip.com`,
+    "t31": `Area piscina`,
+    "t32": `Aree sportive comunali vicino alla spiaggia.`,
+    "t33": `Torre del Mar tutto l'anno, vieni e divertiti!!`,
+    "t34": `Torre del Mar tutto l'anno – vieni e divertiti!`,
+  },
+  de: {
+    "t01": `1 Schlafzimmer-Wohnzimmer mit Doppelbett und Schlafsofa.`,
+    "t02": `150 Meter vom Strand entfernt (weniger als 5 Minuten zu Fuß).`,
+    "t03": `450 Meter vom Zentrum entfernt (Paseo Larios).`,
+    "t04": `Aktivitäten und Freizeit`,
+    "t05": `Ferienwohnung in Torre del Mar | Estrella Apartment mit Pool`,
+    "t06": `Großer Gemeinschaftspool für Erwachsene und Kinder, geöffnet von Mitte Juni bis Mitte September und innerhalb eines privaten Geländes.`,
+    "t07": `Sehr gut gelegenes Apartment, 5 Minuten vom Leuchtturm von Torre del Mar entfernt und komplett ausgestattet. Mit Pool, ganz in der Nähe des Strandes (5 Minuten zu Fuß), umgeben von allen wichtigen Geschäften und Dienstleistungen.`,
+    "t08": `Schuhschränke.`,
+    "t09": `Voll ausgestattetes Badezimmer mit Dusche.`,
+    "t10": `Strandbibliothek mit Büchern und Spielen 10 Minuten zu Fuß entfernt.`,
+    "t11": `Willkommen im Touristenapartment Estrella del Mar`,
+    "t12": `Maximale Kapazität: 4 Personen im Sommer.`,
+    "t13": `In der Nähe von Geschäften, Restaurants, Bars, Supermärkten, Apotheken, Basaren, Banken, Busbahnhof und Taxistand, Sporteinrichtungen und vielem mehr.`,
+    "t14": `Unabhängige voll ausgestattete Küche.`,
+    "t15": `Apartment-Ausstattung`,
+    "t16": `Touristenlizenz vorhanden.`,
+    "t17": `Umgebung und nahegelegene Dienstleistungen`,
+    "t18": `Google Tag (gtag.js)`,
+    "t19": `Ideal für Paare außerhalb der Sommersaison.`,
+    "t20": `Zusätzliche Informationen`,
+    "t21": `Waschmaschine und elektrischer Boiler.`,
+    "t22": `Lesen in der Stadtbibliothek, 2 Minuten zu Fuß entfernt.`,
+    "t23": `Keine Haustiere erlaubt.`,
+    "t24": `Keine Langzeitvermietung oder Vermietung während des Schuljahres.`,
+    "t25": `Rauchen nicht erlaubt.`,
+    "t26": `Ostlage und Morgensonne.`,
+    "t27": `Für weitere Informationen sehen Sie sich unsere Bewertungen und Verfügbarkeit auf Airbnb und Vrbo an. Sie können auch unser zweites Touristenapartment über den Fotolink ansehen, das sich in derselben Gegend befindet. Kontaktieren Sie uns gerne über WhatsApp oder E-Mail bei Fragen.`,
+    "t28": `Smart-TV, WLAN, Klimaanlage/Heizung.`,
+    "t29": `Bevorzugte Lage`,
+    "t30": `Website entwickelt von miprochip.com`,
+    "t31": `Poolbereich`,
+    "t32": `Städtische Sporteinrichtungen neben dem Strand.`,
+    "t33": `Torre del Mar das ganze Jahr über – kommen Sie und genießen Sie!!`,
+    "t34": `Torre del Mar das ganze Jahr über – komm und genieß es!`,
+  },
+};
 
-  gtag('config', 'G-EYHZE218SX');
+
+function setLanguage(lang) {
+  const elements = document.querySelectorAll('[data-key]');
+  elements.forEach(el => {
+    const key = el.getAttribute('data-key');
+    if (translations[lang] && translations[lang][key] && el.children.length === 0) {
+      el.innerText = translations[lang][key];
+    }
+  });
+}
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -76,69 +264,260 @@
   </style>
 </head>
 <body>
-<div class="overlay">
-<h1>Bienvenidos al Apartamento Turístico Estrella del Mar</h1>
+<div class="overlay"><div class="language-buttons" style="margin-bottom:10px; text-align:center;"><button onclick="setLanguage('es')">ES</button><button onclick="setLanguage('en')">EN</button><button onclick="setLanguage('fr')">FR</button><button onclick="setLanguage('it')">IT</button><button onclick="setLanguage('de')">DE</button></div>
+<h1 data-key="t11">Bienvenidos al Apartamento Turístico Estrella del Mar</h1>
 <img alt="Foto del apartamento" class="foto-apartamento" src="apartamentoestrella.jpeg"/>
 <div class="descripcion" id="descripcion">
-<h2>Ubicación privilegiada</h2>
-<p>Apartamento muy bien ubicado, a 5 min del Faro de Torre del Mar y totalmente equipado. Con piscina, muy cerca de la playa a 5 min a pié y rodeados de todos los comercios y servivios esenciales.</p>
-<h2>Comodidades del apartamento</h2>
+<h2 data-key="t29">Ubicación privilegiada</h2>
+<p data-key="t07">Apartamento muy bien ubicado, a 5 min del Faro de Torre del Mar y totalmente equipado. Con piscina, muy cerca de la playa a 5 min a pié y rodeados de todos los comercios y servivios esenciales.</p>
+<h2 data-key="t15">Comodidades del apartamento</h2>
 <ul>
-<li>1 dormitorio-salón con cama de matrimonio y sofá cama.</li>
-<li>Armarios zapatero.</li>
-<li>Baño completo con ducha.</li>
-<li>Orientación este y sol de mañana.</li>
-<li>Cocina independiente totalmente equipada.</li>
-<li>Smart-TV, WiFi, aire acondicionado/calefacción.</li>
-<li>Lavadora y termo eléctrico.</li>
-<li>Dispone de Licencia turistica.</li>
+<li data-key="t01">1 dormitorio-salón con cama de matrimonio y sofá cama.</li>
+<li data-key="t08">Armarios zapatero.</li>
+<li data-key="t09">Baño completo con ducha.</li>
+<li data-key="t26">Orientación este y sol de mañana.</li>
+<li data-key="t14">Cocina independiente totalmente equipada.</li>
+<li data-key="t28">Smart-TV, WiFi, aire acondicionado/calefacción.</li>
+<li data-key="t21">Lavadora y termo eléctrico.</li>
+<li data-key="t16">Dispone de Licencia turistica.</li>
 <pre>
 
 </pre>
-<img src="vutestrella.png" alt="Sello Garantía Turística VUT/MA/55379" style="display:block;margin:auto;width:300px;">
+<img alt="Sello Garantía Turística VUT/MA/55379" src="vutestrella.png" style="display:block;margin:auto;width:300px;"/>
 <pre>
 
 </pre>
-
-
 </ul>
-<h2>Zona de piscinas</h2>
-<p>Amplia piscina comunitaria para adultos y niños, abierta desde mediados de Junio a mediados de Septiembre y dentro de un recinto privado.</p>
+<h2 data-key="t31">Zona de piscinas</h2>
+<p data-key="t06">Amplia piscina comunitaria para adultos y niños, abierta desde mediados de Junio a mediados de Septiembre y dentro de un recinto privado.</p>
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-  <img src="piscinaestrella.jpg" alt="Imagen centrada" style="max-width: 100%; height: auto;">
+<img alt="Imagen centrada" src="piscinaestrella.jpg" style="max-width: 100%; height: auto;"/>
 </div>
-<h2>Entorno y servicios cercanos</h2>
+<h2 data-key="t17">Entorno y servicios cercanos</h2>
 <ul>
-<li>A 150 metros de la playa (menos de 5 minutos a pie).</li>
-<li>A 450 metros del centro (Paseo Larios).</li>
-<li>Cerca de tiendas, restaurantes, bares, supermercados, farmacias, bazares, bancos, estacion de autobuses y parada de taxi, instalaciones deportivas y mucho más.</li>
+<li data-key="t02">A 150 metros de la playa (menos de 5 minutos a pie).</li>
+<li data-key="t03">A 450 metros del centro (Paseo Larios).</li>
+<li data-key="t13">Cerca de tiendas, restaurantes, bares, supermercados, farmacias, bazares, bancos, estacion de autobuses y parada de taxi, instalaciones deportivas y mucho más.</li>
 </ul>
-<h2>Actividades y ocio</h2>
+<h2 data-key="t04">Actividades y ocio</h2>
 <ul>
-<li>Lectura en la biblioteca municipal a 2 min a pie.</li>
-<li>Biblioplaya con libros y juegos a 10 min andando.</li>
-<li>Zonas deportivas municipales junto a la playa.</li>
+<li data-key="t22">Lectura en la biblioteca municipal a 2 min a pie.</li>
+<li data-key="t10">Biblioplaya con libros y juegos a 10 min andando.</li>
+<li data-key="t32">Zonas deportivas municipales junto a la playa.</li>
 </ul>
-<h2>Información adicional</h2>
+<h2 data-key="t20">Información adicional</h2>
 <ul>
-<li>Capacidad máxima: 4 personas en verano.</li>
-<li>Ideal para parejas fuera de la temporada estival.</li>
-<li>No se admiten mascotas.</li>
-<li>No se permite fumar.</li>
-<li>No se alquila por larga temporada ni durante el curso escolar.</li>
+<li data-key="t12">Capacidad máxima: 4 personas en verano.</li>
+<li data-key="t19">Ideal para parejas fuera de la temporada estival.</li>
+<li data-key="t23">No se admiten mascotas.</li>
+<li data-key="t25">No se permite fumar.</li>
+<li data-key="t24">No se alquila por larga temporada ni durante el curso escolar.</li>
 </ul>
-<p>Para más información consulta nuestras reseñas y disponibilidad en Airbnb y Vrbo. Tambien puedes consultar oferta de nuestro segundo apartamento turístico, accediendo al enlace de la foto, ubicado en la misma zona.También puedes contactar por WhatsApp o email para cualquier duda.</p>
-<a href="https://www.airbnb.es/h/estudiotorredelmarestrella" target="_blank" rel="noopener noreferrer"><img src="airbnb.jpg" alt="Airbnb" style="width:80px; height:auto; margin-right:10px;"></a>
-<a href="https://www.vrbo.com/es-es/p11860462/" target="_blank" rel="noopener noreferrer"><img src="vrbo.png" alt="Vrbo" style="width:80px; height:auto;"></a>
-<a href="https://torredelmar.github.io/bahamas/" target="_blank" rel="noopener noreferrer"><img src="bahamas1.jpeg" alt="bahamas1" style="width:60px; height:auto;"></a>
-<a href="https://wa.me/34644390448" target="_blank" rel="noopener noreferrer"><img src="whatsApp.jpg" alt="whatsApp" style="width:70px; height:auto;"></a>
-<a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=alquilerentorredelmar@gmail.com" target="_blank" rel="noopener noreferrer"><img src="gmail.jpg" alt="gmail" style="width:70px; height:auto;"></a>
-<p>¡¡Torre del Mar todo el año, ven y disfruta!!</p>
+<p data-key="t27">Para más información consulta nuestras reseñas y disponibilidad en Airbnb y Vrbo. Tambien puedes consultar oferta de nuestro segundo apartamento turístico, accediendo al enlace de la foto, ubicado en la misma zona.También puedes contactar por WhatsApp o email para cualquier duda.</p>
+<a href="https://www.airbnb.es/h/estudiotorredelmarestrella" rel="noopener noreferrer" target="_blank"><img alt="Airbnb" src="airbnb.jpg" style="width:80px; height:auto; margin-right:10px;"/></a>
+<a href="https://www.vrbo.com/es-es/p11860462/" rel="noopener noreferrer" target="_blank"><img alt="Vrbo" src="vrbo.png" style="width:80px; height:auto;"/></a>
+<a href="https://torredelmar.github.io/bahamas/" rel="noopener noreferrer" target="_blank"><img alt="bahamas1" src="bahamas1.jpeg" style="width:60px; height:auto;"/></a>
+<a href="https://wa.me/34644390448" rel="noopener noreferrer" target="_blank"><img alt="whatsApp" src="whatsApp.jpg" style="width:70px; height:auto;"/></a>
+<a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=alquilerentorredelmar@gmail.com" rel="noopener noreferrer" target="_blank"><img alt="gmail" src="gmail.jpg" style="width:70px; height:auto;"/></a>
+<p data-key="t34">¡¡Torre del Mar todo el año, ven y disfruta!!</p>
 </div>
 <div class="contacto">
+<p><a data-key="t30" href="https://www.miprochip.com" rel="noopener noreferrer" target="_blank"> Web desarrollada por miprochip.com</a></p>
+</div>
+</div>
+<script>
+const translations = {
+  es: {
+    "t01": `1 dormitorio-salón con cama de matrimonio y sofá cama.`,
+    "t02": `A 150 metros de la playa (menos de 5 minutos a pie).`,
+    "t03": `A 450 metros del centro (Paseo Larios).`,
+    "t04": `Actividades y ocio`,
+    "t05": `Alquiler vacacional Torre del Mar | Apartamento Estrella con piscina`,
+    "t06": `Amplia piscina comunitaria para adultos y niños, abierta desde mediados de Junio a mediados de Septiembre y dentro de un recinto privado.`,
+    "t07": `Apartamento muy bien ubicado, a 5 min del Faro de Torre del Mar y totalmente equipado. Con piscina, muy cerca de la playa a 5 min a pié y rodeados de todos los comercios y servivios esenciales.`,
+    "t08": `Armarios zapatero.`,
+    "t09": `Baño completo con ducha.`,
+    "t10": `Biblioplaya con libros y juegos a 10 min andando.`,
+    "t11": `Bienvenidos al Apartamento Turístico Estrella del Mar`,
+    "t12": `Capacidad máxima: 4 personas en verano.`,
+    "t13": `Cerca de tiendas, restaurantes, bares, supermercados, farmacias, bazares, bancos, estacion de autobuses y parada de taxi, instalaciones deportivas y mucho más.`,
+    "t14": `Cocina independiente totalmente equipada.`,
+    "t15": `Comodidades del apartamento`,
+    "t16": `Dispone de Licencia turistica.`,
+    "t17": `Entorno y servicios cercanos`,
+    "t18": `Google tag (gtag.js)`,
+    "t19": `Ideal para parejas fuera de la temporada estival.`,
+    "t20": `Información adicional`,
+    "t21": `Lavadora y termo eléctrico.`,
+    "t22": `Lectura en la biblioteca municipal a 2 min a pie.`,
+    "t23": `No se admiten mascotas.`,
+    "t24": `No se alquila por larga temporada ni durante el curso escolar.`,
+    "t25": `No se permite fumar.`,
+    "t26": `Orientación este y sol de mañana.`,
+    "t27": `Para más información consulta nuestras reseñas y disponibilidad en Airbnb y Vrbo. Tambien puedes consultar oferta de nuestro segundo apartamento turístico, accediendo al enlace de la foto, ubicado en la misma zona.También puedes contactar por WhatsApp o email para cualquier duda.`,
+    "t28": `Smart-TV, WiFi, aire acondicionado/calefacción.`,
+    "t29": `Ubicación privilegiada`,
+    "t30": `Web desarrollada por miprochip.com`,
+    "t31": `Zona de piscinas`,
+    "t32": `Zonas deportivas municipales junto a la playa.`,
+    "t33": `html`,
+    "t34": `¡¡Torre del Mar todo el año, ven y disfruta!!`,
+  },
+  en: {
+    "t01": `1 bedroom-living room with double bed and sofa bed.`,
+    "t02": `150 meters from the beach (less than 5 minutes walk).`,
+    "t03": `450 meters from the center (Paseo Larios).`,
+    "t04": `Activities and leisure`,
+    "t05": `Holiday rental in Torre del Mar | Estrella Apartment with pool`,
+    "t06": `Large community pool for adults and children, open from mid-June to mid-September and within a private complex.`,
+    "t07": `Very well located apartment, 5 min from the Torre del Mar Lighthouse and fully equipped. With pool, very close to the beach (5 min walk), surrounded by all essential shops and services.`,
+    "t08": `Shoe cabinets.`,
+    "t09": `Full bathroom with shower.`,
+    "t10": `Beach library with books and games 10 min walk away.`,
+    "t11": `Welcome to Estrella del Mar Tourist Apartment`,
+    "t12": `Maximum capacity: 4 people in summer.`,
+    "t13": `Close to shops, restaurants, bars, supermarkets, pharmacies, bazaars, banks, bus station and taxi stop, sports facilities and much more.`,
+    "t14": `Independent kitchen fully equipped.`,
+    "t15": `Apartment Amenities`,
+    "t16": `Tourist license available.`,
+    "t17": `Surroundings and nearby services`,
+    "t18": `Google tag (gtag.js)`,
+    "t19": `Ideal for couples outside the summer season.`,
+    "t20": `Additional information`,
+    "t21": `Washing machine and electric water heater.`,
+    "t22": `Reading at the municipal library 2 min walk away.`,
+    "t23": `No pets allowed.`,
+    "t24": `Not rented long-term or during the school year.`,
+    "t25": `Smoking is not allowed.`,
+    "t26": `East orientation and morning sun.`,
+    "t27": `For more information, check our reviews and availability on Airbnb and Vrbo. You can also view our second tourist apartment via the photo link, located in the same area. Feel free to contact us via WhatsApp or email with any questions.`,
+    "t28": `Smart-TV, WiFi, air conditioning/heating.`,
+    "t29": `Privileged location`,
+    "t30": `Website developed by miprochip.com`,
+    "t31": `Pool area`,
+    "t32": `Municipal sports areas next to the beach.`,
+    "t33": `Torre del Mar all year round, come and enjoy!!`,
+    "t34": `Torre del Mar all year round – come and enjoy!`,
+  },
+  fr: {
+    "t01": `1 chambre-salon avec lit double et canapé-lit.`,
+    "t02": `À 150 mètres de la plage (moins de 5 minutes à pied).`,
+    "t03": `À 450 mètres du centre (Paseo Larios).`,
+    "t04": `Activités et loisirs`,
+    "t05": `Location de vacances à Torre del Mar | Appartement Estrella avec piscine`,
+    "t06": `Grande piscine communautaire pour adultes et enfants, ouverte de mi-juin à mi-septembre et située dans une enceinte privée.`,
+    "t07": `Appartement très bien situé, à 5 min du phare de Torre del Mar et entièrement équipé. Avec piscine, très proche de la plage (5 min à pied), entouré de tous les commerces et services essentiels.`,
+    "t08": `Placards à chaussures.`,
+    "t09": `Salle de bain complète avec douche.`,
+    "t10": `Biblioplage avec livres et jeux à 10 min à pied.`,
+    "t11": `Bienvenue à l'appartement touristique Estrella del Mar`,
+    "t12": `Capacité maximale : 4 personnes en été.`,
+    "t13": `Proche de magasins, restaurants, bars, supermarchés, pharmacies, bazars, banques, gare routière et arrêt de taxi, installations sportives et bien plus encore.`,
+    "t14": `Cuisine indépendante entièrement équipée.`,
+    "t15": `Commodités de l'appartement`,
+    "t16": `Licence touristique disponible.`,
+    "t17": `Environnement et services à proximité`,
+    "t18": `Balise Google (gtag.js)`,
+    "t19": `Idéal pour les couples hors saison estivale.`,
+    "t20": `Informations supplémentaires`,
+    "t21": `Lave-linge et chauffe-eau électrique.`,
+    "t22": `Lecture à la bibliothèque municipale à 2 min à pied.`,
+    "t23": `Animaux non admis.`,
+    "t24": `Non loué pour de longues périodes ni pendant l'année scolaire.`,
+    "t25": `Interdiction de fumer.`,
+    "t26": `Orientation est et soleil du matin.`,
+    "t27": `Pour plus d'informations, consultez nos avis et disponibilités sur Airbnb et Vrbo. Vous pouvez également consulter notre deuxième appartement touristique via le lien photo, situé dans la même zone. N'hésitez pas à nous contacter via WhatsApp ou email pour toute question.`,
+    "t28": `Smart-TV, WiFi, climatisation/chauffage.`,
+    "t29": `Emplacement privilégié`,
+    "t30": `Site web développé par miprochip.com`,
+    "t31": `Zone de piscine`,
+    "t32": `Zones sportives municipales près de la plage.`,
+    "t33": `Torre del Mar toute l'année, venez en profiter !!`,
+    "t34": `Torre del Mar toute l'année – venez en profiter !`,
+  },
+  it: {
+    "t01": `1 camera-soggiorno con letto matrimoniale e divano letto.`,
+    "t02": `A 150 metri dalla spiaggia (meno di 5 minuti a piedi).`,
+    "t03": `A 450 metri dal centro (Paseo Larios).`,
+    "t04": `Attività e svago`,
+    "t05": `Affitto vacanze a Torre del Mar | Appartamento Estrella con piscina`,
+    "t06": `Ampia piscina comunitaria per adulti e bambini, aperta da metà giugno a metà settembre, all'interno di un complesso privato.`,
+    "t07": `Appartamento molto ben posizionato, a 5 min dal faro di Torre del Mar e completamente attrezzato. Con piscina, molto vicino alla spiaggia (5 min a piedi), circondato da tutti i negozi e servizi essenziali.`,
+    "t08": `Armadi portascarpe.`,
+    "t09": `Bagno completo con doccia.`,
+    "t10": `Biblioteca da spiaggia con libri e giochi a 10 min a piedi.`,
+    "t11": `Benvenuti all'appartamento turistico Estrella del Mar`,
+    "t12": `Capacità massima: 4 persone in estate.`,
+    "t13": `Vicino a negozi, ristoranti, bar, supermercati, farmacie, bazar, banche, stazione degli autobus e fermata dei taxi, impianti sportivi e molto altro.`,
+    "t14": `Cucina indipendente completamente attrezzata.`,
+    "t15": `Servizi dell'appartamento`,
+    "t16": `Licenza turistica disponibile.`,
+    "t17": `Ambiente e servizi vicini`,
+    "t18": `Tag Google (gtag.js)`,
+    "t19": `Ideale per coppie fuori stagione estiva.`,
+    "t20": `Informazioni aggiuntive`,
+    "t21": `Lavatrice e scaldabagno elettrico.`,
+    "t22": `Lettura nella biblioteca comunale a 2 minuti a piedi.`,
+    "t23": `Animali non ammessi.`,
+    "t24": `Non affittato per lunghi periodi né durante l'anno scolastico.`,
+    "t25": `Vietato fumare.`,
+    "t26": `Esposizione est e sole del mattino.`,
+    "t27": `Per maggiori informazioni consulta le nostre recensioni e disponibilità su Airbnb e Vrbo. Puoi anche vedere il nostro secondo appartamento turistico tramite il link nella foto, situato nella stessa zona. Non esitare a contattarci tramite WhatsApp o email per qualsiasi domanda.`,
+    "t28": `Smart-TV, WiFi, aria condizionata/riscaldamento.`,
+    "t29": `Posizione privilegiata`,
+    "t30": `Sito sviluppato da miprochip.com`,
+    "t31": `Area piscina`,
+    "t32": `Aree sportive comunali vicino alla spiaggia.`,
+    "t33": `Torre del Mar tutto l'anno, vieni e divertiti!!`,
+    "t34": `Torre del Mar tutto l'anno – vieni e divertiti!`,
+  },
+  de: {
+    "t01": `1 Schlafzimmer-Wohnzimmer mit Doppelbett und Schlafsofa.`,
+    "t02": `150 Meter vom Strand entfernt (weniger als 5 Minuten zu Fuß).`,
+    "t03": `450 Meter vom Zentrum entfernt (Paseo Larios).`,
+    "t04": `Aktivitäten und Freizeit`,
+    "t05": `Ferienwohnung in Torre del Mar | Estrella Apartment mit Pool`,
+    "t06": `Großer Gemeinschaftspool für Erwachsene und Kinder, geöffnet von Mitte Juni bis Mitte September und innerhalb eines privaten Geländes.`,
+    "t07": `Sehr gut gelegenes Apartment, 5 Minuten vom Leuchtturm von Torre del Mar entfernt und komplett ausgestattet. Mit Pool, ganz in der Nähe des Strandes (5 Minuten zu Fuß), umgeben von allen wichtigen Geschäften und Dienstleistungen.`,
+    "t08": `Schuhschränke.`,
+    "t09": `Voll ausgestattetes Badezimmer mit Dusche.`,
+    "t10": `Strandbibliothek mit Büchern und Spielen 10 Minuten zu Fuß entfernt.`,
+    "t11": `Willkommen im Touristenapartment Estrella del Mar`,
+    "t12": `Maximale Kapazität: 4 Personen im Sommer.`,
+    "t13": `In der Nähe von Geschäften, Restaurants, Bars, Supermärkten, Apotheken, Basaren, Banken, Busbahnhof und Taxistand, Sporteinrichtungen und vielem mehr.`,
+    "t14": `Unabhängige voll ausgestattete Küche.`,
+    "t15": `Apartment-Ausstattung`,
+    "t16": `Touristenlizenz vorhanden.`,
+    "t17": `Umgebung und nahegelegene Dienstleistungen`,
+    "t18": `Google Tag (gtag.js)`,
+    "t19": `Ideal für Paare außerhalb der Sommersaison.`,
+    "t20": `Zusätzliche Informationen`,
+    "t21": `Waschmaschine und elektrischer Boiler.`,
+    "t22": `Lesen in der Stadtbibliothek, 2 Minuten zu Fuß entfernt.`,
+    "t23": `Keine Haustiere erlaubt.`,
+    "t24": `Keine Langzeitvermietung oder Vermietung während des Schuljahres.`,
+    "t25": `Rauchen nicht erlaubt.`,
+    "t26": `Ostlage und Morgensonne.`,
+    "t27": `Für weitere Informationen sehen Sie sich unsere Bewertungen und Verfügbarkeit auf Airbnb und Vrbo an. Sie können auch unser zweites Touristenapartment über den Fotolink ansehen, das sich in derselben Gegend befindet. Kontaktieren Sie uns gerne über WhatsApp oder E-Mail bei Fragen.`,
+    "t28": `Smart-TV, WLAN, Klimaanlage/Heizung.`,
+    "t29": `Bevorzugte Lage`,
+    "t30": `Website entwickelt von miprochip.com`,
+    "t31": `Poolbereich`,
+    "t32": `Städtische Sporteinrichtungen neben dem Strand.`,
+    "t33": `Torre del Mar das ganze Jahr über – kommen Sie und genießen Sie!!`,
+    "t34": `Torre del Mar das ganze Jahr über – komm und genieß es!`,
+  },
+};
 
-<p><a href="https://www.miprochip.com" rel="noopener noreferrer" target="_blank"> Web desarrollada por miprochip.com</a></p>
-</div>
-</div>
-</body>
+
+function setLanguage(lang) {
+  const elements = document.querySelectorAll('[data-key]');
+  elements.forEach(el => {
+    const key = el.getAttribute('data-key');
+    if (translations[lang] && translations[lang][key] && el.children.length === 0) {
+      el.innerText = translations[lang][key];
+    }
+  });
+}
+</script></body>
 </html>
