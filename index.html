@@ -262,6 +262,33 @@ function setLanguage(lang) {
       margin-top: 10px;
     }
   </style>
+
+<!-- SEO Improvements -->
+<meta content="index, follow" name="robots"/>
+<meta content="apartamento Torre del Mar, alquiler vacacional, piscina, playa, WiFi, vacaciones Andalucía, Airbnb, Vrbo" name="keywords"/>
+<link href="https://torredelmar.github.io/estrella" rel="canonical"/>
+<!-- Schema.org JSON-LD para motores de búsqueda -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Apartamento Turístico Estrella del Mar",
+  "image": "https://torredelmar.github.io/estrella",
+  "description": "Apartamento turístico en Torre del Mar con piscina, WiFi y aire acondicionado, ideal para vacaciones.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Torre del Mar",
+    "addressCountry": "ES"
+  },
+  "url": "https://torredelmar.github.io/estrella",
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification","name": "Piscina","value": true},
+    {"@type": "LocationFeatureSpecification","name": "WiFi","value": true},
+    {"@type": "LocationFeatureSpecification","name": "Aire Acondicionado","value": true},
+    {"@type": "LocationFeatureSpecification","name": "Cerca de la playa","value": true}
+  ]
+}
+</script>
 </head>
 <body style="margin-top:60px;">
 <div class="overlay"><div class="language-buttons" style="position:fixed;top:0;left:0;width:100%;z-index:9999;background-color:rgba(255,255,255,0.8);padding:8px;text-align:center;box-shadow:0 2px 4px rgba(0,0,0,0.1);backdrop-filter:blur(4px);"><button onclick="setLanguage('es')">ES</button><button onclick="setLanguage('en')">EN</button><button onclick="setLanguage('fr')">FR</button><button onclick="setLanguage('it')">IT</button><button onclick="setLanguage('de')">DE</button></div>
