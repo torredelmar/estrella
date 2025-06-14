@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://torredelmar.github.io/estrella/sitemap.xml
